@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="welcome-section">
+    <img src="{% static 'images/welcome.jpg' %}" alt="Welcome Image" class="background-image">
+    <h2>Welcome to Hostel Booking</h2>
+    <p>Find and book the best hostels easily!</p>
+    <a href="{% url 'view_hostels' %}" class="button">Browse Hostels</a>
+</div>
+<div class="about-section">
+    <h2>About Us</h2>
+    <p>We help you find and book the best hostels in your area. Our platform is user-friendly and secure.</p>
+</div>
+<div class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Email: support@hostelbooking.com</p>
+    <p>Phone: +254 791 440 321</p>
+</div>
+{% endblock %}

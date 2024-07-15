@@ -1,0 +1,12 @@
+/* // JavaScript functionality can be added here for interactive components
+document.addEventListener('DOMContentLoaded', function() {
+    // Example: Smooth scrolling for anchor links
+    const links = document.querySelectorAll('a[href^="#"]');
+    for (let link of links) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+}); */

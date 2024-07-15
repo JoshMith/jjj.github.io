@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Book Hostel{% endblock %}
+
+{% block content %}
+<h2>Book a Hostel</h2>
+<form method="post" action="{% url 'book_hostel' %}">
+    {% csrf_token %}
+    <label for="hostel_name">Hostel Name:</label>
+    <select name="hostel_name" required>
+        {% for hostel in hostels %}
+            <option value="{{ hostel.name }}">{{ hostel.name }}</option>
+        {% endfor %}
+    </select><br>
+    <label for="entry_date">Entry Date:</label>
+    <input type="date" name="entry_date" required><br>
+    <button type="submit">Book</button>
+</form>
+{% endblock %}
